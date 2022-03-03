@@ -7,3 +7,15 @@ links:
   rails_book: "https://www.railstutorial.org/book"
   rails_news: "https://news.railstutorial.org/"
   rails_author: "https://www.michaelhartl.com/"
+
+regex:
+  email: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/'
+
+digits:
+  digit_6: 6
+  digit_50: 50
+  digit_255: 255
+
+gravatar:
+  default_size: 80
+  url: "https://secure.gravatar.com/avatar"
