@@ -84,3 +84,15 @@ vi:
               too_short: "tối thiểu 6 ký tự!"
             password_confirmation:
               confirmation: "không trùng khớp!"
+
+  sessions:
+    destroy: "Tạm biệt nhé!"
+    create:
+      failed: "Sai email hoặc password!"
+    new:
+      header: "Đăng nhập"
+      title: "Đăng nhập"
+      email: "Địa chỉ email"
+      password: "Mật khẩu"
+      invite: "Đăng ký ngay!"
+      login_btn: "Đăng nhập"
