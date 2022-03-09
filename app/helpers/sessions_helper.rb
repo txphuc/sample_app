@@ -14,12 +14,24 @@ module SessionsHelper
 
   def current_user
     user_id ||= session[:user_id] || cookies.signed[:user_id]
-    remember_token = cookies[:remember_token]
+    token = cookies[:remember_token]
 
     @current_user ||= User.find_by id: user_id
-    login @current_user if @current_user&.authenticate_token? remember_token
+    login @current_user if @current_user&.authenticated?(:remember, token)
 
     @current_user
+  end
+
+  def current_user? user_id
+    user_id && user_id.to_i == current_user.try(:id)
+  end
+
+  def can_delete? user_id
+    current_user.admin? && !current_user?(user_id)
+  end
+
+  def logged_in?
+    current_user.present?
   end
 
   def forget user
@@ -41,17 +53,5 @@ module SessionsHelper
 
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
-  end
-
-  def current_user? user_id
-    user_id && user_id.to_i == current_user.try(:id)
-  end
-
-  def can_delete? user_id
-    current_user.admin? && !current_user?(user_id)
-  end
-
-  def logged_in?
-    current_user.present?
   end
 end
