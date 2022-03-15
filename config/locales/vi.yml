@@ -46,8 +46,8 @@ vi:
     not_found: "Không tìm thấy người dùng"
     not_logged_in: "Xin hãy đăng nhập!"
     update:
-      success: "Cập nhật thành công rồi ạ!"
-      failed: "Thất bại rồi ạ!"
+      success: "Cập nhật thành công!"
+      failed: "Thất bại!"
     new:
       title: "Đăng ký"
       header: "Đăng ký"
@@ -63,11 +63,11 @@ vi:
       header: "Danh sách người dùng"
     user:
       delete: "Xoá"
-      delete_confirm: "Xác nhận xoá ?"
+      delete_confirm: "Xác nhận xoá?"
     destroy:
       success: "Xoá thành công"
       failed: "Xoá thất bại"
-    unauthorized: "Oops! Bạn không được phép làm thế!"
+    unauthorized: "Thao tác không hợp lệ!"
 
   shared:
     error_messages:
@@ -115,3 +115,15 @@ vi:
       invite: "Đăng ký ngay!"
       login_btn: "Đăng nhập"
       remember_me: "Ghi nhớ tôi"
+
+  account_activations:
+    edit:
+      success: "Kích hoạt tài khoản thành công"
+      failed: "Liên kết không tồn tại"
+
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+      greeting: "Xin chào"
+      body: "Chào mừng đến với Sample App. Click vào bên dưới để kích hoạt tài khoản"
+      link_title: "Kích hoạt"
